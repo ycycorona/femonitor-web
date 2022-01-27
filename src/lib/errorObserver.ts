@@ -65,8 +65,9 @@ export class ErrorObserver extends BaseObserver {
         const target: any = event.target || event.srcElement;
         const isElementTarget =
           target instanceof HTMLScriptElement ||
-          target instanceof HTMLLinkElement ||
-          target instanceof HTMLImageElement;
+          target instanceof HTMLLinkElement 
+          // ||
+          // target instanceof HTMLImageElement;
         if (!isElementTarget) return false;
 
         let url: string;
